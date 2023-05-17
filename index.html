@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Desafio 2 - Mis Demonios  </title>
+    <!-- Aqui enlazo el archivo CSS: -->
+    <link rel="stylesheet" href="./Assets/CSS/Estilo.css">
+    <!-- Enlazar la libreria de bootstrap para los iconos del footer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body> 
+    <div class="grid-container"> 
+
+        <!-- Primero vamos a poner el sidebar que es lo que muestra en la esquina superior izquierda. Esto es lo que ocupa el espacio de esa esquina primero. Seguido, vendrá el header, que no parte desde esa esquina si no que del "centro". -->
+
+        <sidebar  class="Menu">
+
+            <div class="Titulo-Icon"> 
+                <img src="./Assets/Imagenes/devil-icon.png" title="Demonio" alt="FallosTecnicos" class="Icon">
+                <h4 class="titulo"> Demonios </h4>
+            </div>
+
+            <nav> 
+                <ul>
+                    <li> Belial <span> (El de ganancias corruptas) </span> </li>
+                    <li> Baphomet <span> (El viola personas) </span> </li>
+                    <li> Asmodeo <span> (El mata parejas) </span> </li>
+                    <li> Phenex <span> (El tortuta animales) </span> </li>
+                </ul>
+            </nav>
+        </sidebar>
+
+
+        <div class="Titulo-Demonio">
+            <img src="./Assets/Imagenes/devil-icon.png" title="Demonio" alt="FallosTecnicos" class="Icon">
+            <h4 class="titulo"> Demonios </h4>
+        </div>
+
+        <!-- Aqui en el header coloco el select y pongo varias opciones vacias para "rellenar" un poco. Como era algo sencillo, tengo este puro codigo de HTML y lo otro lo modifico en el css. -->
+
+        <header class="Titulo"> 
+            <p> Ordenar por: </p>
+
+            <form>
+                <select class="Seleccionar"> 
+                    <option value="Price"> Precio </option> 
+                    <option value="Price"></option> 
+                    <option value="Price"></option> 
+                    <option value="Price"></option> 
+                </select>
+            </form>
+
+        </header>
+
+
+        <!-- Hasta aqui vamos bien. Ahora lo que haremos será trabajar sobre el main. Poner los demonios en una fila de 4 y que sean dos columnas. Notar que es hasta el final puesto que el footer no es parte del main solo del sidebar. -->
+
+        <main> 
+            <div class="Demonio">
+                <img src="./Assets/Imagenes/Belial.webp" alt="FallosTecnicos" title="Belial">
+                <h2> El de ganancias corruptas </h2>
+                <button> Invocar </button>
+            </div>
+
+            <div class="Demonio">
+                <img src="./Assets/Imagenes/DoomDemonio.webp" alt="FallosTecnicos" title="Baphomet">
+                <h2> El viola personas </h2>
+                <button> Invocar </button>
+            </div>
+
+            <div class="Demonio">
+                <img src="./Assets/Imagenes/Asmodeo.webp" alt="FallosTecnicos" title="Asmodeo">
+                <h2> El mata parejas </h2>
+                <button> Invocar </button>
+            </div>
+            
+            <div class="Demonio">
+                <img src="./Assets/Imagenes/Phenex2.jpeg" alt="FallosTecnicos" title="Phenex">
+                <h2> El tortura animales </h2>
+                <button> Invocar </button>
+            </div>
+
+            <div class="Demonio">
+                <img src="./Assets/Imagenes/Belial.webp" alt="FallosTecnicos" title="Belial">
+                <h2> El de ganancias corruptas </h2>
+                <button> Invocar </button>
+            </div>
+
+            <div class="Demonio">
+                <img src="./Assets/Imagenes/DoomDemonio.webp" alt="FallosTecnicos" title="Baphomet">
+                <h2> El viola personas </h2>
+                <button> Invocar </button>
+            </div>
+
+        </main>
+
+        <div class="Paginas"> 
+            <ul>
+                <li> <i class="bi bi-caret-left"> </i> </li>
+                <li> 1 </li>
+                <li> 2 </li>
+                <li> 3 </li>
+                <li> <i class="bi bi-caret-right"> </i> </li>
+            </ul>
+        </div>
+
+
+        <footer>
+
+            <div>
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-instagram"></i>
+            </div>
+
+            <p> @MisDemonios </p>
+
+        </footer>
+
+
+
+    </div>
+
+
+</body>

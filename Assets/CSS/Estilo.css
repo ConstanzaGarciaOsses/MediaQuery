@@ -1,0 +1,272 @@
+/* El reseteo de margin y padding */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Estructura de la pagina. Es mas que nada armar el esqueleto */
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    'sidebar header'
+    'sidebar main'
+    'sidebar main'
+    'footer main'
+    'footer Paginas';
+    grid-template-columns: 1fr 6fr;
+}
+
+.Titulo-Demonio{
+    display: none;
+}
+
+header{
+    grid-area: header;
+    border: 2px solid lawngreen;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding-top: 5px;
+}
+
+form{
+    width: 100%;
+}
+
+.Seleccionar{
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    width: 90%;
+}
+
+.Titulo{
+    background-color: rgb(0, 0, 0);
+    color: lawngreen;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 30px;
+}
+
+
+/* Hasta aqui vamos bien... */ 
+
+
+sidebar{ 
+    grid-area: sidebar;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.955);
+    border: 2px solid lawngreen;
+    color: wheat;
+}
+
+/* Hasta aqui vamos bien, tengo el icono desde el HTML, vamos a ordenarlo para que se vea bonito */
+
+.Icon{ /* Tamaño del icono devil */
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+}
+
+.Titulo-Icon{ /* relacion espacial entre icono y titulo "demonios" */
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid lawngreen;
+    margin-bottom: 15px;
+}
+
+.titulo{ /* Tamaño del titulo "Demmonios" */ 
+    padding: 15px;
+    font-size: 27px;
+}
+
+/* Para ir de a poco, hasta aqui vamos bien */ 
+
+/* Lo que sigue es lo estetico del sidebar */ 
+
+.Menu{
+    display: flex;
+    flex-direction: column;
+}
+
+ul{
+    padding-left: 20px;
+}
+
+ul span{
+    color: rgb(105, 105, 105);
+    font-style: italic;
+}
+
+ul li {
+    padding-bottom: 10px;
+    list-style: none;
+    font-size: 17px;
+}
+
+/* Hasta aqui, vamos bien. Ahora trabajaremos sobre el main */ 
+
+main{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    row-gap: 70px;
+    column-gap: 30px;
+    padding: 25px;
+    background-color: black;
+}
+
+/* La clase de las cuatro cards */ 
+.Demonio {
+    color: wheat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Imagen de los demonios dentro de la card */
+.Demonio img {
+    object-fit: contain;
+    height: 200px;
+    width: 100%;
+}
+
+/* Titulo de los demonios (lo que hacen*/ 
+.Demonio h2{
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 30px;
+}
+
+/* Ok, abarca toda la card y esta bonito */
+button{
+    padding: 10px;
+    background-color: maroon;
+    color: lawngreen;
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+
+ /* Ahora vamos a ir con los numeros que indican las paginas. */ 
+ 
+.Paginas{
+    grid-area: Paginas;
+    background-color: black;
+}
+
+.Paginas ul{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding-bottom: 10px;
+}
+
+.Paginas ul li{
+    list-style: none;
+    text-decoration: none;
+    color: wheat;
+    font-size: 20px;
+    padding: 4px;
+}
+
+
+/* Ahora viene la ultima parte el footer */ 
+footer{
+    grid-area: footer;
+    border: 2px solid lawngreen;
+    background-color: black;
+    color: wheat;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    font-size: 1.3rem;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer p{
+    padding-top: 7px;
+}
+
+
+
+/* ===================== PARTE MOBILE ===================== */ 
+
+@media (max-width:576px) {
+
+    */{
+        margin:0;
+        padding:0;
+    }
+
+    /* Le damos la forma o el esqueleto a la version mobile */ 
+    .grid-container{
+        display: grid;
+        grid-template-areas: 
+        'Titulo-Demonio Titulo-Demonio'
+        'Titulo Titulo'
+        'main main'
+        'Pagina Paginas'
+        'footer footer';
+        grid-template-columns: 1fr 6fr;
+    }
+
+    /* Seguimos con el detalle */ 
+
+    .Titulo-Demonio{
+        grid-area: Titulo-Demonio;
+        color: wheat;
+        margin: 5px
+        border 4px solid red;        
+    }
+
+    .Titulo{
+        grid-area: Titulo;
+    }
+
+    main{
+        grid-area: main;
+        grid-template-columns: 1fr;
+    }
+    
+    .Menu{ /* Esto es para que oculte la sidebar */ 
+       display: none;
+    }
+    
+    .Paginas{
+        grid-area: Paginas;
+    }
+    
+    footer{
+        grid-area: footer;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
